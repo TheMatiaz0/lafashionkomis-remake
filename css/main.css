@@ -1,0 +1,42 @@
+:root
+{
+    --main-color: #000000;
+    --secondary-color: #090808;
+    --text-color: #FFFFFF;
+    --weird-color: #CFCFCF;
+}
+
+body
+{
+    background-image: url("../images/background.jpg");
+    font-family: 'Fauna One';
+    font-size: 48px;
+}
+
+p
+{
+    color: white;
+}
+
+#margined
+{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#header1
+{
+    background-color: var(--main-color);
+}
+
+#header2
+{
+    background-color: var(--secondary-color);
+}
+
+.navContent
+{
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
