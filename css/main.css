@@ -4,19 +4,41 @@
     --secondary-color: #090808;
     --text-color: #FFFFFF;
     --weird-color: #CFCFCF;
+    --highlight-color: #979696;
 }
 
 body
 {
     background-image: url("../images/background.jpg");
-    font-family: 'Fauna One';
-    font-size: 48px;
+    font-family: 'Fauna One', 'Open Sans';
+    font-size: 1.05vmax;
+    font-weight: 10;
+    color: var(--text-color);
 }
 
-p
+#city
 {
-    color: white;
+    margin-top: -2.5%;
+    margin-bottom: 0.5%;
 }
+
+a:link
+{
+    color: var(--text-color);
+}
+a:visited
+{
+    color: var(--text-color) !important;
+}
+a:hover
+{
+    color: var(--highlight-color) !important;
+}
+a:active
+{
+    color: red;
+}
+
 
 #margined
 {
@@ -32,11 +54,59 @@ p
 #header2
 {
     background-color: var(--secondary-color);
+    border-bottom: 3px dashed var(--text-color);
 }
 
-.navContent
+#headerContent1
 {
     margin-top: 2%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 7%;
+    margin-right: 7%;
 }
+
+#headerContent2
+{
+    margin-left: 12.3%;
+    margin-right: 12.3%;
+}
+#flexBox
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}   
+
+.rightNavText
+{
+    text-align: right;
+    font-size: 1.35vmax;
+    color: var(--weird-color);
+}
+
+.backgroundSquare
+{
+    background-image: url('../images/BackgroundBackground.png');
+}
+
+.contentCentre
+{
+    margin-left: 9%;
+    margin-right: 9%;
+    background-image: url('../images/ContentCentre.png');
+}
+
+.carouselBg
+{
+    margin-bottom: -2.5%;
+    background-image: url('../images/Rectangle.png');
+    margin-left: -20%;
+    margin-right: -20%;
+}
+
+@media screen and (max-width: 800px) {
+    #margined {
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+  }
