@@ -18,6 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
+    <script src="js/cookieFix.js"></script>
 
 
     <div id="margined">
@@ -68,8 +69,9 @@
                                     <h1>Krakowski komis z wyjątkowymi cenami</h1>
                                     <p>Przyjdź i odśwież swoją garderobę już
                                         <a id="checker" class="dottedUnderline" data-bs-toggle="tooltip"
-                                            data-bs-placement="top"
-                                            title="Yo yo, śmiało byku wpadaj do sklepiku!">dzisiaj</a>
+                                            data-bs-placement="top" data-bs-html="true"
+                                            title="Teraz jest <i>X, godzina X</i>.<br />
+                                                    Oznacza to, że komis jest dzisiaj <u>otwarty</u> jeszcze przez X godzin i X minut.">dzisiaj</a>
                                         !</p>
                                 </div>
                             </div>
@@ -89,10 +91,65 @@
                                     kupiona, ubranie
                                     już nie pasuje lub pojawiła się chęć odświeżenia/zmiany garderoby - Jeśli tak jest u
                                     Ciebie to
-                                    zapraszamy do naszego komisu!</p>
+                                    <strong class="strongStrong">zapraszamy do naszego komisu!</strong></p>
                             </div>
                             <div class="col-6">
                                 <img class="img-fluid" src="images/wardrobe.png" alt="Garderoba">
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-6">
+                                <h1 class="articleHeader">Jak działa nasz komis odzieżowy?</h1>
+                                <p>Przyjmujemy rzeczy takie jak odzież, obuwie, biżuterie, torebki, galanterie, ale
+                                    również wiele innych ciekawych i wyjątkowych rzeczy.</p>
+                                <p>Przyjęcia rzeczy odbywają się codziennie (z wyjątkiem niedziel). Na miejscu je
+                                    ocenimy, wycenimy i wystawimy na sprzedaż. Więcej informacji znajdziesz w <a
+                                        href="#">regulaminie</a>.</p>
+                                <span>Ubrania do przyjęcia powinny być:</span>
+                                <ul>
+                                    <li>modne,</li>
+                                    <li>czyste,</li>
+                                    <li>niezniszczone,</li>
+                                    <li>wyjątkowe.</li>
+                                </ul>
+                                <p>Rozliczenie następuje po sprzedaży danej rzeczy.</p>
+                            </div>
+                            <div class="col-6">
+                                <br />
+                                <br />
+                                <br />
+                                <img class="img-fluid" src="images/MultipleImg.jpg" alt="Garderoba">
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-6">
+                                <h1 class="articleHeader">Kontakt</h1>
+                                <p>O szczegóły oferty komisowej:</p>
+                                <ul>
+                                    <li>Pytaj na miejscu: <a href="https://goo.gl/maps/4Zjyw9NzA3hpEKPd7">Starowiślna
+                                            44</a></li>
+                                    <li>Zadzwoń do nas: +48 512 544 988</li>
+                                    <li>Wyślij maila: <a href="mailto:lafashionkomis@op.pl">lafashionkomis@op.pl</a>
+                                    </li>
+                                    <li>Napisz na Facebooku: <a
+                                            href="https://facebook.com/lafashionkomis">facebook.com/lafashionkomis</a>
+                                    </li>
+                                </ul>
+                                <span>Czynne:</span>
+                                <ul>
+                                    <li>Od poniedziałku do piątku: <i>11:00 - 18:00</i></li>
+                                    <li>W sobotę: 10:00 - 14:00</li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <br />
+                                <div class="responsiveMap">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.6908879054554!2d19.945451415939466!3d50.054621623687325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b154c8645cb%3A0x17f9271d6b769a54!2sStarowi%C5%9Blna%2044%2C%2031-035%20Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1626981077439!5m2!1spl!2spl"
+                                    width="455" height="341.25" style="border:0;" allowfullscreen="true" scrolling="no" frameborder="0" oading="lazy"></iframe>
+                                </div>
                             </div>
                         </div>
                     </div>
