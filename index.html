@@ -14,58 +14,94 @@
 </head>
 
 <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
+
+
     <div id="margined">
-        <nav id="header1" class="navbar py-1">
-            <div id="headerContent1" class="container-fluid">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-6">
-                            <a class="navbar-brand" href="#">
-                                <img class="img-fluid" src="images/logo.jpg">
-                            </a>
-                        </div>
-                        <div id="flexBox" class="col-6">
-                            <address>
-                                <div class="rightNavText" id="street">ul. Starowiślna 44</div>
-                                <div class="rightNavText" id="city">Kraków</div>
-                                <div class="rightNavText" id="number">tel. 512 544 988</div>
-                            </address>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <nav id="header2" class="navbar py-0 ">
-            <div id="headerContent2" class="container-fluid">
-                <div class="row">
-                    <div class="container-fluid col-12 d-flex justify-content-start">
-                        <a class="nav-link active" aria-current="page" href="#">Strona Główna</a>
-                        <a class="nav-link" href="#">Kontakt</a>
-                        <a class="nav-link" href="#">Regulamin</a>
-                        <a class="nav-link" href="#">Galeria</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div class="backgroundSquare">
-            <div class="contentCentre">
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="images/Present.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block carouselBg">
-                                <h1>Krakowski komis z wyjątkowymi cenami</h1>
-                                <p>Przyjdź i odśwież swoją garderobę już teraz!</p>
+        <header>
+            <nav id="header1" class="navbar py-1">
+                <div id="headerContent1" class="container-fluid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-6">
+                                <a class="navbar-brand" href="#">
+                                    <img class="img-fluid" src="images/logo.jpg">
+                                </a>
+                            </div>
+                            <div id="flexBox" class="col-6">
+                                <address>
+                                    <div class="rightNavText" id="street">ul. Starowiślna 44</div>
+                                    <div class="rightNavText" id="city">Kraków</div>
+                                    <div class="rightNavText" id="number">tel. 512 544 988</div>
+                                </address>
                             </div>
                         </div>
                     </div>
                 </div>
+            </nav>
+        </header>
+        <header>
+            <nav id="header2" class="navbar py-0 ">
+                <div id="headerContent2" class="container-fluid">
+                    <div class="row">
+                        <div class="container-fluid col-12 d-flex justify-content-start">
+                            <a class="nav-link active" aria-current="page" href="#">Strona Główna</a>
+                            <a class="nav-link" href="#">Kontakt</a>
+                            <a class="nav-link" href="#">Regulamin</a>
+                            <a class="nav-link" href="#">Galeria</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="backgroundSquare">
+            <div class="contentCentre">
+                <div class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/Present.jpg" class="d-block w-100" alt="Wystawa ubrań">
+                            <div class="carousel-caption d-none d-md-block">
+                                <div class="captionBox">
+                                    <h1>Krakowski komis z wyjątkowymi cenami</h1>
+                                    <p>Przyjdź i odśwież swoją garderobę już
+                                        <a id="checker" class="dottedUnderline" data-bs-toggle="tooltip"
+                                            data-bs-placement="top"
+                                            title="Yo yo, śmiało byku wpadaj do sklepiku!">dzisiaj</a>
+                                        !</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <article id="homeArticle">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-6">
+                                <h1 class="articleHeader">Witamy!</h1>
+                                <p>W Waszych szafach znajdują się czasem niespotykane egzemplarze, wyjątkowe unikaty
+                                    znanych marek,
+                                    światowej klasy projektantów, czy po prostu modne, nietuzinkowe ciuchy.</p>
+                                <p>Zapewne każdy z nas posiada w swojej garderobie rzecz, która została nietrafnie
+                                    kupiona, ubranie
+                                    już nie pasuje lub pojawiła się chęć odświeżenia/zmiany garderoby - Jeśli tak jest u
+                                    Ciebie to
+                                    zapraszamy do naszego komisu!</p>
+                            </div>
+                            <div class="col-6">
+                                <img class="img-fluid" src="images/wardrobe.png" alt="Garderoba">
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="js/stupidFixForBootstrap.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
