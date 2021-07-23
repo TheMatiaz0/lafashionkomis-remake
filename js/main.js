@@ -2,7 +2,7 @@ var timer = null;
 var checker = $("#checker")
 
 var days = ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota'];
-var workHours = ['25 -1', '11 18', '11 18', '11 18', '11 18', '11 18', '10 14'];
+var workHours = ['23 0', '11 18', '11 18', '11 18', '11 18', '11 18', '10 14'];
 
 checker.mouseenter(function()
 {
@@ -17,39 +17,58 @@ checker.mouseleave(function()
 function changer()
 {
     var dt = new Date();
-    var time = dt.getHours() + ":" + dt.getMinutes();
+    var time = String(dt.getHours()).padStart(2, "0") + ":" + String(dt.getMinutes()).padStart(2, "0");
+
     var adder = dt.getDay();
+    var startAdder = adder;
     var dayOfWeek = days[adder];
-    if (dt.getDay() == 0)
+    var startDate = new Date();
+    var endDate = new Date();
+
+    var endHour = parseInt(workHours[adder % 7].split(' ')[1]);
+
+    var startHour = parseInt(workHours[startAdder % 7].split(' ')[0]);
+
+    startDate.setHours(startHour)
+    startDate.setMinutes(0);
+
+    endDate.setHours(endHour);
+    endDate.setMinutes(0);
+
+    var finalText = `Na bazie twojego lokalnego czasu, jest teraz ${dayOfWeek.toLowerCase()}, godzina ${time}.<br />`;
+
+    if (dt >= endDate)
     {
-        adder = dt.getDay() + 1;
+        when = "jutro"
+        if (dt.getDay() == 6)
+        {
+            startDate.setDate(dt.getDate() + 1);
+            adder = adder + 1;
+            startAdder = adder + 1;
+            when = "w poniedziałek"
+        }
+
+        startDate.setDate(dt.getDate() + 1);
+        startAdder = adder + 1;
+
+        var startHour = parseInt(workHours[startAdder % 7].split(' ')[0]);
+
+        startDate.setHours(startHour)
+        startDate.setMinutes(0);
+
+        finalText += `Komis jest zamknięty, zapraszamy ${when} o ${startDate.getHours()}:00`;
     }
-    var hours = workHours[adder];
-    var startHour = hours[0];
-    var endHour = hours[1];
 
-    var finalText = `Na bazie twojego lokalnego czasu, jest teraz ${dayOfWeek.toLowerCase()}, godzina ${time}.<br />`
-
-    /*
-    if (dt.getHours() > startHour)
+    else if (dt < startDate)
     {
-
-        //good
+        finalText += `Komis jest jeszcze zamknięty, zapraszamy dzisiaj o ${startDate.getHours()}:00`
     }
 
-    else if (dt.getHours < startHour)
+    else
     {
-        finalText += `To oznacza, że komis zostanie otwarty za ${abs(dt.getHours() - startHour)}`;
-        alert("k")
-        // too before :D
+        finalText += `Komis jest jeszcze otwarty przez najbliższe X godzin i X minut.`;
     }
 
-    else if (dt.getHours == startHour)
-    {
-        // open
-    }
-    */
-    
     checker.attr("data-bs-original-title", finalText);
     const tooltipElement = document.querySelector('[data-bs-toggle="tooltip"]');
     let tool = bootstrap.Tooltip.getInstance(tooltipElement);
@@ -58,7 +77,6 @@ function changer()
 
 function start()
 {
-
     timer = setInterval(changer, 1000);
 }
 
