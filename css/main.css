@@ -18,6 +18,7 @@ body
 
     color: var(--text-color);
     font-weight: lighter;
+    scroll-behavior: smooth;
 }
 
 #city
@@ -67,6 +68,8 @@ a:hover
 {
     margin-left: 12.3%;
     margin-right: 12.3%;
+    display: flex;
+    justify-content: start;
 }
 
 #flexBox
@@ -108,12 +111,6 @@ a:hover
     top: auto;
 }
 
-.captionBox
-{
-    margin-top: 1%;
-    margin-bottom: -1%;
-}
-
 .dottedUnderline
 {
     text-indent: 2.5px;
@@ -137,7 +134,7 @@ a:hover
 
 #homeArticle
 {
-    margin-top: 5%;
+    margin-top: 7.5%;
     margin-right: 6%;
     margin-left: 6%;
 }
@@ -175,17 +172,17 @@ a:hover
 
 .divider
 {
-    margin-top: 22%;
+    margin-top: 5%;
 }
 
 .divider-small
 {
-    margin-top: 5%;
+    margin-top: 12%;
 }
 
 .headerLink
 {
-    font-size: 1.35em;
+    font-size: 1.45em;
 }
 
 .contentText
@@ -209,6 +206,12 @@ a:hover
     width: 100%;
 }
 
+.captionBox
+{
+    margin-top: 2em; /* im więcej tym do góry */
+    margin-bottom: -2em; /* im mniej tym w dół*/
+}
+
 @media (min-width: 600px)
 {
     .articleHeader
@@ -219,7 +222,6 @@ a:hover
     .rightNavText
     {
         font-size: 1.65em;
-        margin-top: 1%;
     }
 
     .headerLink
@@ -234,13 +236,35 @@ a:hover
 
     .captionHeader
     {
-        font-size: 2.6em;
+        font-size: 2.1em;
     }
     
     .captionDescription
     {
-        font-size: 1.3em;
+        font-size: 1.2em;
     } 
+
+    .captionBox
+    {
+        margin-top: 1.5em; /* im więcej tym do góry */
+        margin-bottom: -1.5em; /* im mniej tym w dół*/
+    }
+
+    #homeArticle
+    {
+        margin-top: 6%;
+    }
+
+    .divider
+    {
+        margin-top: 22%;
+    }
+    
+    .divider-small
+    {
+        margin-top: 5%;
+    }
+    
 }
 
 @media (min-width: 1100px)
@@ -275,42 +299,28 @@ a:hover
     {
         font-size: 0.9em;
     } 
-}
 
-/*
-@media (min-width: 2200px)
-{
-    .articleHeader
+    .captionBox
     {
-        font-size: 2.63em;
+        margin-top: 0.5em; /* im więcej tym do góry */
+        margin-bottom: -0.5em; /* im mniej tym w dół*/
     }
 
-    .rightNavText
+    #homeArticle
     {
-        font-size: 2em;
-    }
-
-    .headerLink
-    {
-        font-size: 1.19em;
-    }
-
-    .contentText
-    {
-        font-size: 0.85em;
-    }
-
-    .captionHeader
-    {
-        font-size: 2.1em;
+        margin-top: 5%;
     }
     
-    .captionDescription
+    .divider
     {
-        font-size: 0.9em;
-    } 
+        margin-top: 22%;
+    }
+    
+    .divider-small
+    {
+        margin-top: 5%;
+    }
 }
-*/
 
 @media screen and (max-width: 800px) 
 {
@@ -333,21 +343,15 @@ a:hover
         margin-right: 0%;
     }
 
-    .divider
-    {
-        margin-top: 0%;
-    }
-
-    .divider-small
-    {
-        margin-top: 0%;
-    }
-
     #headerContent2
     {
+        /* Maybe:
+        margin-left: 1.33%;
+        margin-right: 1.33%;
+        */
+
         margin-left: 0%;
         margin-right: 0%;
-        text-align: center;
+        justify-content: center;
     }
-
   }
