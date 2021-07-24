@@ -29,14 +29,20 @@
                         <div class="row">
                             <div class="col-6">
                                 <a class="navbar-brand" href="#">
-                                    <img class="img-fluid" src="images/logo.jpg">
+                                    <img class="img-fluid logo" src="images/logo.jpg">
                                 </a>
                             </div>
                             <div id="flexBox" class="col-6">
                                 <address>
-                                    <div class="rightNavText" id="street">ul. Starowiślna 44</div>
-                                    <div class="rightNavText" id="city">Kraków</div>
-                                    <div class="rightNavText" id="number">tel. 512 544 988</div>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="rightNavText" id="street">ul. Starowiślna 44</div>
+                                            <div class="rightNavText" id="city">Kraków</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="rightNavText" id="number">tel. 512 544 988</div>
+                                        </div>
+                                    </div>
                                 </address>
                             </div>
                         </div>
@@ -45,14 +51,14 @@
             </nav>
         </header>
         <header>
-            <nav id="header2" class="navbar py-0 ">
+            <nav id="header2" class="navbar py-0">
                 <div id="headerContent2" class="container-fluid">
                     <div class="row">
-                        <div class="container-fluid col-12 d-flex justify-content-start">
-                            <a class="nav-link active" aria-current="page" href="#">Strona Główna</a>
-                            <a class="nav-link" href="#">Kontakt</a>
-                            <a class="nav-link" href="#">Regulamin</a>
-                            <a class="nav-link" href="#">Galeria</a>
+                        <div class="d-flex justify-content-start">
+                            <a class="nav-link active headerLink" aria-current="page" href="#">Strona Główna</a>
+                            <a class="nav-link headerLink" href="#">Kontakt</a>
+                            <a class="nav-link headerLink" href="#">Regulamin</a>
+                            <a class="nav-link headerLink" href="#">Galeria</a>
                         </div>
                     </div>
                 </div>
@@ -64,14 +70,13 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="images/Present.jpg" class="d-block w-100" alt="Wystawa ubrań">
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption">
                                 <div class="captionBox">
-                                    <h1>Krakowski komis z wyjątkowymi cenami</h1>
-                                    <p>Przyjdź i odśwież swoją garderobę już
-                                        <a id="tooltipDate" class="dottedUnderline colorUnderlineSuccess" data-bs-toggle="tooltip"
-                                            data-bs-placement="top" data-bs-html="true"
-                                            title="Ładowanie...">dzisiaj</a>
-                                        !</p>
+                                    <h1 class="captionHeader">Krakowski komis z wyjątkowymi cenami</h1>
+                                    <p class="captionDescription">Przyjdź i odśwież swoją garderobę już
+                                        <a id="tooltipDate" class="dottedUnderline colorUnderlineSuccess"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true"
+                                            title="Ładowanie...">dzisiaj</a>!</p>
                                 </div>
                             </div>
                         </div>
@@ -81,73 +86,80 @@
                 <article id="homeArticle">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-md-6">
                                 <h1 class="articleHeader">Witamy!</h1>
-                                <p>W Waszych szafach znajdują się czasem niespotykane egzemplarze, wyjątkowe unikaty
+                                <p class="contentText">W Waszych szafach znajdują się czasem niespotykane egzemplarze,
+                                    wyjątkowe unikaty
                                     znanych marek,
                                     światowej klasy projektantów, czy po prostu modne, nietuzinkowe ciuchy.</p>
-                                <p>Zapewne każdy z nas posiada w swojej garderobie rzecz, która została nietrafnie
+                                <p class="contentText">Zapewne każdy z nas posiada w swojej garderobie rzecz, która
+                                    została nietrafnie
                                     kupiona, ubranie
                                     już nie pasuje lub pojawiła się chęć odświeżenia/zmiany garderoby - Jeśli tak jest u
                                     Ciebie to
                                     <strong class="strongStrong">zapraszamy do naszego komisu!</strong></p>
                             </div>
-                            <div class="col-6">
+                            <div class="col-md-6 d-none d-md-block">
+                                <div class="divider-small"></div>
                                 <img class="img-fluid" src="images/wardrobe.png" alt="Garderoba">
                             </div>
                         </div>
                         <br />
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-md-6">
                                 <h1 class="articleHeader">Jak działa nasz komis odzieżowy?</h1>
-                                <p>Przyjmujemy rzeczy takie jak odzież, obuwie, biżuterie, torebki, galanterie, ale
+                                <p class="contentText">Przyjmujemy rzeczy takie jak odzież, obuwie, biżuterie, torebki,
+                                    galanterie, ale
                                     również wiele innych ciekawych i wyjątkowych rzeczy.</p>
-                                <p>Przyjęcia rzeczy odbywają się codziennie (z wyjątkiem niedziel). Na miejscu je
+                                <p class="contentText">Przyjęcia rzeczy odbywają się codziennie (z wyjątkiem niedziel).
+                                    Na miejscu je
                                     ocenimy, wycenimy i wystawimy na sprzedaż. Więcej informacji znajdziesz w <a
                                         href="#">regulaminie</a>.</p>
-                                <span>Ubrania do przyjęcia powinny być:</span>
+                                <span class="contentText">Ubrania do przyjęcia powinny być:</span>
                                 <ul>
-                                    <li>modne,</li>
-                                    <li>czyste,</li>
-                                    <li>niezniszczone,</li>
-                                    <li>wyjątkowe.</li>
+                                    <li class="contentText">modne,</li>
+                                    <li class="contentText">czyste,</li>
+                                    <li class="contentText">niezniszczone,</li>
+                                    <li class="contentText">wyjątkowe.</li>
                                 </ul>
-                                <p>Rozliczenie następuje po sprzedaży danej rzeczy.</p>
+                                <p class="contentText">Rozliczenie następuje po sprzedaży danej rzeczy.</p>
                             </div>
-                            <div class="col-6">
-                                <br />
-                                <br />
-                                <br />
+                            <div class="col-md-6">
+                                <div class="divider"></div>
                                 <img class="img-fluid" src="images/MultipleImg.jpg" alt="Garderoba">
                             </div>
                         </div>
                         <br />
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-md-6">
                                 <h1 class="articleHeader">Kontakt</h1>
-                                <p>O szczegóły oferty komisowej:</p>
+                                <p class="contentText">O szczegóły oferty komisowej:</p>
                                 <ul>
-                                    <li>Pytaj na miejscu: <a href="https://goo.gl/maps/4Zjyw9NzA3hpEKPd7">Starowiślna
+                                    <li class="contentText">Pytaj na miejscu: <a
+                                            href="https://goo.gl/maps/4Zjyw9NzA3hpEKPd7">Starowiślna
                                             44</a></li>
-                                    <li>Zadzwoń do nas: +48 512 544 988</li>
-                                    <li>Wyślij maila: <a href="mailto:lafashionkomis@op.pl">lafashionkomis@op.pl</a>
+                                    <li class="contentText">Zadzwoń do nas: +48 512 544 988</li>
+                                    <li class="contentText">Wyślij maila: <a
+                                            href="mailto:lafashionkomis@op.pl">lafashionkomis@op.pl</a>
                                     </li>
-                                    <li>Napisz na Facebooku: <a
+                                    <li class="contentText">Napisz na Facebooku: <a
                                             href="https://facebook.com/lafashionkomis">facebook.com/lafashionkomis</a>
                                     </li>
                                 </ul>
-                                <span>Czynne:</span>
+                                <span class="contentText">Czynne:</span>
                                 <ul>
-                                    <li>Od poniedziałku do piątku: <i>11:00 - 18:00</i></li>
-                                    <li>W sobotę: 10:00 - 14:00</li>
+                                    <li class="contentText">Od poniedziałku do piątku: <i>11:00 - 18:00</i></li>
+                                    <li class="contentText">W sobotę: <i>10:00 - 14:00</i></li>
                                 </ul>
                             </div>
-                            <div class="col-6">
+                            <div class="col-md-6">
                                 <br />
+                                <div class="divider-small"></div>
                                 <div class="responsiveMap">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.6908879054554!2d19.945451415939466!3d50.054621623687325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b154c8645cb%3A0x17f9271d6b769a54!2sStarowi%C5%9Blna%2044%2C%2031-035%20Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1626981077439!5m2!1spl!2spl"
-                                    width="455" height="341.25" style="border:0;" allowfullscreen="true" scrolling="no" frameborder="0" oading="lazy"></iframe>
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.6908879054554!2d19.945451415939466!3d50.054621623687325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b154c8645cb%3A0x17f9271d6b769a54!2sStarowi%C5%9Blna%2044%2C%2031-035%20Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1626981077439!5m2!1spl!2spl"
+                                        width="455" height="341.25" style="border:0;" allowfullscreen="true"
+                                        scrolling="no" frameborder="0" oading="lazy"></iframe>
                                 </div>
                             </div>
                         </div>

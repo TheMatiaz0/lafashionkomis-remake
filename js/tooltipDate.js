@@ -1,5 +1,5 @@
 var timer = null;
-const TIMER_INTERVAL = 850;
+const TIMER_INTERVAL = 400;
 
 const TOOLTIP_DATE = $("#tooltipDate")
 
