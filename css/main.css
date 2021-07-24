@@ -5,7 +5,8 @@
     --text-color: #FFFFFF;
     --weird-color: #CFCFCF;
     --highlight-color: #979696;
-    --off-color: greenyellow;
+    --color-success: greenyellow;
+    --color-danger: rgb(255, 203, 32);
 }
 
 body
@@ -122,9 +123,19 @@ a:hover
     padding-right: 2.5px;
     display: inline-block;
     line-height: 1.3;
-    border-bottom: 2px dashed var(--off-color);
     text-decoration: none;
-    color: var(--off-color);
+}
+
+.colorUnderlineSuccess
+{
+    border-bottom: 2px dashed var(--color-success);
+    color: var(--color-success);
+}
+
+.colorUnderlineDanger
+{
+    border-bottom: 2px dashed var(--color-danger);
+    color: var(--color-danger);
 }
 
 #homeArticle
