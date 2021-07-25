@@ -226,8 +226,8 @@ a:hover
 
 .captionBox
 {
-    margin-top: 2em; /* im więcej tym do góry */
-    margin-bottom: -2em; /* im mniej tym w dół*/
+    margin-top: 2em;
+    margin-bottom: -2em;
 }
 
 @media (min-width: 600px)
@@ -264,8 +264,8 @@ a:hover
 
     .captionBox
     {
-        margin-top: 1.5em; /* im więcej tym do góry */
-        margin-bottom: -1.5em; /* im mniej tym w dół*/
+        margin-top: 1.5em;
+        margin-bottom: -1.5em;
     }
 
     #homeArticle
@@ -320,8 +320,8 @@ a:hover
 
     .captionBox
     {
-        margin-top: 0.5em; /* im więcej tym do góry */
-        margin-bottom: -0.5em; /* im mniej tym w dół*/
+        margin-top: 0.5em;
+        margin-bottom: -0.5em;
     }
 
     #homeArticle
@@ -363,11 +363,6 @@ a:hover
 
     #headerContent2
     {
-        /* Maybe:
-        margin-left: 1.33%;
-        margin-right: 1.33%;
-        */
-
         margin-left: 0%;
         margin-right: 0%;
         justify-content: center;
