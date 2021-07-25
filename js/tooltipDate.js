@@ -58,9 +58,10 @@ function updateText()
     endDate.setHours(endHour);
     endDate.setMinutes(0);
 
-    var finalText = `Na podstawie twojego lokalnego czasu, jest teraz ${dayOfWeek.toLowerCase()}, godzina ${time}.<br />`;
+    var finalText = `Według twojego lokalnego czasu, jest teraz ${dayOfWeek.toLowerCase()}, godzina ${time}.<br />`;
 
-    var whenOpen = "jutro"
+    var whenOpen = "jutro";
+
     if (now >= endDate)
     {
         if (now.getDay() == 6)
@@ -78,42 +79,35 @@ function updateText()
         startDate.setHours(startHour)
         startDate.setMinutes(0);
         tooltipGoDanger();
+
+        finalText += `To oznacza, że komis jest zamknięty, zapraszamy ${whenOpen} o ${startDate.getHours()}:00.`;
     }
 
     else if (now < startDate)
     {
-        whenOpen = "dzisiaj";
+        whenOpen = "dzisiaj"
+        finalText += `To oznacza, że komis jest zamknięty, zapraszamy dzisiaj o ${startDate.getHours()}:00.`;
         tooltipGoDanger();
     }
 
     else
     {
-        whenOpen = null;
+        whenOpen = "teraz";
         var diffMs = (endDate - now);
         var diffHrs = Math.floor((diffMs % DAY) / HOUR);
         var diffMins = Math.round(((diffMs % DAY) % HOUR) / MINUTE);
 
         if (diffHrs == 0)
         {
-            finalText += `Komis jest jeszcze otwarty przez ${diffMins} minut.`;
+            finalText += `Komis jest jeszcze otwarty przez ${diffMins} minut.\n`;
         }
         
         else
         {
-            finalText += `Komis jest jeszcze otwarty przez ${diffHrs} godzin i ${diffMins} minut.`;
-        }
-
-        if (diffHrs <= 1)
-        {
-            finalText += `(Śpiesz się, jeśli zamierzasz teraz udać się do komisu!)`
+            finalText += `Komis jest jeszcze otwarty przez ${diffHrs} godzin i ${diffMins} minut.\n`;
         }
         
         tooltipGoSuccess();
-    }
-
-    if (whenOpen != null)
-    {
-        finalText += `Komis jest zamknięty, zapraszamy ${whenOpen} o ${startDate.getHours()}:00`;
     }
 
     TOOLTIP_DATE.text(whenOpen);
