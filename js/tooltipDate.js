@@ -99,12 +99,12 @@ function updateText()
 
         if (diffHrs == 0)
         {
-            finalText += `Komis jest jeszcze otwarty przez ${diffMins} minut.\n`;
+            finalText += `Komis jest jeszcze otwarty przez ${diffMins} minut.`;
         }
         
         else
         {
-            finalText += `Komis jest jeszcze otwarty przez ${diffHrs} godzin i ${diffMins} minut.\n`;
+            finalText += `Komis jest jeszcze otwarty przez ${diffHrs} godzin i ${diffMins} minut.`;
         }
         
         tooltipGoSuccess();
