@@ -40,6 +40,13 @@ a:hover
     color: var(--highlight-color) !important;
 }
 
+.active
+{
+    text-decoration: whitesmoke;
+    text-decoration-line: underline;
+    text-decoration-thickness: 3.66px;
+}
+
 #margined
 {
     margin-left: 10%;
@@ -132,6 +139,11 @@ a:hover
     color: var(--color-danger);
 }
 
+.center
+{
+    text-align: center;
+}
+
 #homeArticle
 {
     margin-top: 7.5%;
@@ -204,6 +216,12 @@ a:hover
 {
     max-width: 325px;
     width: 100%;
+}
+
+.bottomLine
+{
+    border-bottom: 0.1px solid var(--weird-color);
+    margin-bottom: 6%;
 }
 
 .captionBox
