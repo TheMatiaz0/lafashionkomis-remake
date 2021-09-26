@@ -3,7 +3,7 @@ Remake of La Fashion company website: http://lafashionkomis.pl
 
 ---
 
-# Concept art I made with Figma:
+# Concept art of home page I made with Figma:
 ![Landing page concept art](concept-art/landingpage.png)
 
 
