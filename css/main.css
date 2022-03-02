@@ -11,7 +11,7 @@
 
 body
 {
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/background.webp");
     font-family: 'Fauna One', 'Open Sans';
 
     font-size: 1.05vmax; 
@@ -232,6 +232,23 @@ a:hover
     margin-bottom: -2em;
 }
 
+.subwencja-info {
+    max-width: 92%;
+}
+
+footer {
+    border-top: 3px dashed var(--text-color);
+}
+
+.footer--text {
+    padding-left: 9%;
+    font-size: 1.5em;
+}
+
+.footer--img {
+    padding-right: 5%;
+}
+
 @media (min-width: 600px)
 {
     .articleHeader
@@ -343,6 +360,16 @@ a:hover
     .divider-small
     {
         margin-top: 5%;
+    }
+
+    .footer--text {
+        padding-left: 16%;
+        font-size: 1.1em;
+    }
+
+    
+    .footer--img {
+        padding-right: 16%;
     }
 }
 
